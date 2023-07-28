@@ -76,12 +76,12 @@ export function GoalOperations () {
       ) }
       { isInputVisible ? (
         <form>
-          <Input
-            className="mb-3"
-            type="text"
-            placeholder="Enter goal title"
-            onChange={ (e) => setGoalTitle(e.target.value) }
-            value={ goalTitle } />
+          {/*<Input*/}
+            {/*className="mb-3"*/}
+            {/*type="text"*/}
+            {/*placeholder="Enter goal title"*/}
+            {/*onChange={ (e) => setGoalTitle(e.target.value) }*/}
+            {/*value={ goalTitle } />*/}
           <ReactQuill
             onChange={ addGoalDesc } value={ goalDesc }
             className="w-1/2" />
