@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { app, firebase_app } from './firebase/config';
+import { app, firebase_app } from '../firebase/config';
 import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
 import 'react-quill/dist/quill.snow.css';
 import { Input } from './components/foundations';
