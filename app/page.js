@@ -1,14 +1,15 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { database } from './firebaseConfig';
+import { app, firebase_app } from './firebase/config';
 import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
 import 'react-quill/dist/quill.snow.css';
 import { Input } from './components/foundations';
 import ReactQuill from './components/ReactQuill';
 import Link from 'next/link';
+import { getFirestore } from "firebase/firestore";
 
 
-
+export const database = getFirestore(firebase_app);
 const dbInstance = collection(database, 'goal');
 
 export default function Home () {
@@ -106,8 +107,8 @@ export function GoalOperations () {
       ) : (<></>)
       }</div>
       <h1 className="title">
-        <Link href="/pages/login">Login</Link>
-        <Link href="/pages/signup">Sign up</Link>
+        <Link href="/login">Login</Link>
+        <Link href="/signup">Sign up</Link>
       </h1>
     </div>
 
