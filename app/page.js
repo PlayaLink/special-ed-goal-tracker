@@ -106,7 +106,8 @@ export function GoalOperations () {
       ) : (<></>)
       }</div>
       <h1 className="title">
-        <Link href="/pages/login">LOGIN</Link>
+        <Link href="/pages/login">Login</Link>
+        <Link href="/pages/signup">Sign up</Link>
       </h1>
     </div>
 
