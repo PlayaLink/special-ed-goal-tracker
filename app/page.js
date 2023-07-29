@@ -5,6 +5,8 @@ import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
 import 'react-quill/dist/quill.snow.css';
 import { Input } from './components/foundations';
 import ReactQuill from './components/ReactQuill';
+import Link from 'next/link';
+
 
 
 const dbInstance = collection(database, 'goal');
@@ -55,8 +57,9 @@ export function GoalOperations () {
     getGoals();
   }, []);
   return (
-    <div>
-      { /*Goals list*/ }
+    <div className="flex justify-between">
+
+      <div className="content">{ /*Goals list*/ }
       { goalsArray.map((goal, i) => {
         const order = i + 1;
         return (
@@ -101,7 +104,10 @@ export function GoalOperations () {
           </div>
         </form>
       ) : (<></>)
-      }
+      }</div>
+      <h1 className="title">
+        <Link href="/pages/login">LOGIN</Link>
+      </h1>
     </div>
 
   );
