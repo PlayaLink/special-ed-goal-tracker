@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { database } from './firebaseConfig';
 import { addDoc, collection, getDocs, Timestamp } from 'firebase/firestore';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Input } from './components/foundations';
+import ReactQuill from './components/ReactQuill';
+
 
 const dbInstance = collection(database, 'goal');
 
